@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="jquery-ui/themes/smoothness/jquery-ui.min.css">
+
+
+
+
+</head>
+
+<body>
+
+
+  <h1><%= title %></h1>
+  <p>Welcome to
+    <%= title %>
+  </p>
+  <h1>Introduce fechas</h1>
+  <form>
+    <label for="startDate">Start Date: </label>
+    <input name="startDate" id="datepicker1" value="" />
+    <label for="endDate">End Date: </label>
+
+    <input name="endDate" id="datepicker2" value="" />
+  </form>
+
+  <!-- <p>Date: <input type="text" id="datepicker"></p> -->
+
+
+  <canvas id="myChart" width="400" height="400"></canvas>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../javascripts/financial-data.js"></script>
+  <script src="../chart.js/dist/Chart.min.js"></script>
+
+  <script src="jquery/dist/jquery.min.js"></script>
+  <script src="jquery-ui/jquery-ui.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      $("#datepicker1").datepicker({
+        dateFormat: "yy-mm-dd"
+      });
+      $("#datepicker2").datepicker({
+        dateFormat: "yy-mm-dd"
+      });
+
+
+    });
+  </script>
+
+</body>
+
 </html>
